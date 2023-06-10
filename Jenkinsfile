@@ -1,9 +1,5 @@
 pipeline {
-    agent { 
-        node {
-            label 'jenkins_slave'
-            }
-      } 
+    agent any
    
     environment{
         dockerImage = ' '
