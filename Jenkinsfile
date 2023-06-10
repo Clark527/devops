@@ -16,8 +16,8 @@ pipeline {
               
                 echo "hey there from github.."
                 sh ''' 
-                python3
-                python
+               
+                python helloW.py
                 '''    
                   }
             }
