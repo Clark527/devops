@@ -1,12 +1,13 @@
 pipeline {
     agent any
-    
+    sleep 3
     environment{
         dockerImage = ' '
         registry = 'jwalant21/new_app'
     }
     
     triggers {
+        sleep 3
         pollSCM '* * * * *'
     }
     stages {
@@ -22,7 +23,7 @@ pipeline {
         stage('Docker Image building'){
             steps{
             echo "building img from dockerfile.."
-            
+            sleep 3
             script {
                 testImage = docker.build 'target_repo'
                 
