@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent { 
+        node {
+            label 'docker-agent-new'
+            }
+      } 
     sleep 3
     environment{
         dockerImage = ' '
