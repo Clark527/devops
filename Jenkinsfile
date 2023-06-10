@@ -15,11 +15,9 @@ pipeline {
         stage('Docker Image building'){
             steps{
             echo "building img from dockerfile.."
-            sh '''
-            docker build -t my_new_image .
-            '''
+            def testImage = docker.build("test-image") 
+            echo "hey there from github.."
             }
-        
         }
     }
 }
