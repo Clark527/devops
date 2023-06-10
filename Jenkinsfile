@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    
+    environment{
+        dockerImage = ' '
+        registry = jwalant21/new_app
+    }
+    
     triggers {
         pollSCM '* * * * *'
     }
@@ -17,8 +23,8 @@ pipeline {
             echo "building img from dockerfile.."
             
             script {
-                def testImage = docker.build("test-image")
-                testImage.push()
+                testImage = docker.build registry
+                
             }
                 
             }
