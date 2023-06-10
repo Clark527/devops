@@ -23,7 +23,7 @@ pipeline {
             echo "building img from dockerfile.."
             
             script {
-                testImage = docker.build registry
+                testImage = docker.build 'target_repo'
                 
             }
                 
