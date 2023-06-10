@@ -3,7 +3,7 @@ pipeline {
     
     environment{
         dockerImage = ' '
-        registry = jwalant21/new_app
+        registry = 'jwalant21/new_app'
     }
     
     triggers {
