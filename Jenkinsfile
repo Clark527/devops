@@ -12,6 +12,7 @@ pipeline {
     stages {
         stage('Initialization') {
             steps {
+                sleep 3
                 echo "hey there from github.."
                 sh ''' 
                 python3 helloW.py
